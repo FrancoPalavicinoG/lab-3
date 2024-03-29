@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Y</title>
+    <meta name="Y.com" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <div style="display: flex; flex-direction: column; min-height: 100vh;">
+      <div style="flex: 1;">
+        <%= render "layouts/navbar" %>
+        <%= yield %>
+      </div>
+        <%= render "layouts/footer" %>
+    </div>
+  </body>
+</html>
