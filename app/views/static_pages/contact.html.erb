@@ -1,42 +1,44 @@
-<h1 style="text-align: center; margin-top: 25px;">Contact Us</h1>
-<form>
-    <div class="row" style=" margin-top: 20px; margin-bottom: 20px; margin-right: 50px; margin-left: 50px">
-        <div class="col">
-            <label for="exampleInputName" class="form-label">First name</label>
-            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+<div class="white-color">
+    <h1 class="center-text-with-margin">Contact Us</h1>
+    <form>
+        <div class="row custom-row-margin">
+            <div class="col">
+                <label for="exampleInputName" class="form-label">First name</label>
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col">
+                <label for="exampleInputName" class="form-label">Last name</label>
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+            </div>
         </div>
-        <div class="col">
-            <label for="exampleInputName" class="form-label">Last name</label>
-            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
-    </div>
-    <div style="margin-bottom: 15px; margin-right: 60px; margin-left: 60px">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" placeholder="Email address" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
+        <div class="custom-margin">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" placeholder="Email address" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
 
-        <div class="input-group">
-            <textarea class="form-control" placeholder="Message" aria-label="With textarea"></textarea>
+            <div class="input-group">
+                <textarea class="form-control" placeholder="Message" aria-label="With textarea"></textarea>
+            </div>
+            
+            <button id="submit button" type="submit" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 20px">Submit</button>
+            <div id="thanks alert" class="alert alert-success" role="alert" style="display: none;">
+                <h4 class="alert-heading">Thank you for your message!</h4>
+                <p>We will contact you soon.</p>
+            </div>
+            <script>
+                var element = document.getElementById("submit button")
+                element.addEventListener("click",
+                    function(){
+                        //Prevenir el envio del formulario, para que se cargue la alerta primero
+                        event.preventDefault()
+                        document.getElementById("thanks alert").style.display = "block"
+                        //Recargar la pagina en 5 segundos para que la alerta desaparesca y se envie el formulario
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 5000);
+                    });
+            </script>
         </div>
-        
-        <button id="submit button" type="submit" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 20px">Submit</button>
-        <div id="thanks alert" class="alert alert-success" role="alert" style="display: none;">
-            <h4 class="alert-heading">Thank you for your message!</h4>
-            <p>We will contact you soon.</p>
-        </div>
-        <script>
-            var element = document.getElementById("submit button")
-            element.addEventListener("click",
-                function(){
-                    //Prevenir el envio del formulario, para que se cargue la alerta primero
-                    event.preventDefault()
-                    document.getElementById("thanks alert").style.display = "block"
-                    //Recargar la pagina en 5 segundos para que la alerta desaparesca y se envie el formulario
-                    setTimeout(function() {
-                        window.location.reload();
-                    }, 5000);
-                });
-        </script>
-    </div>
-</form>
+    </form>
+</div>

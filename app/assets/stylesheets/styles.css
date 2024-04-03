@@ -1,0 +1,58 @@
+.body-background-color {
+    background-color: black;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} 
+
+.flex-content {
+    flex: 1;
+}
+
+.text-size {
+    font-size: 13px;
+}
+  
+.footer-centered {
+    text-align: center;
+    margin-top: auto;
+}
+  
+.paragraph-no-margin {
+    margin-bottom: 0px;
+}
+  
+.white-color {
+    color: white;
+}
+  
+.center-text-with-margin {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.navbar.bg-body-tertiary {
+    background-color: black !important; 
+}
+
+.navbar.bg-body-tertiary .navbar-nav .nav-link{
+    color: white; 
+}
+
+.custom-row-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.custom-margin {
+    margin-bottom: 15px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+  
